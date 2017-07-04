@@ -7,7 +7,6 @@
 
 import React, {Component} from 'react'
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
@@ -107,6 +106,8 @@ class MessageBar extends Component {
       /* Position of the alert and Animation Type the alert is shown */
       position: props.position || 'top',
       animationType: props.animationType,
+
+      rightElement: props.rightElement
     };
   }
 
@@ -369,6 +370,7 @@ class MessageBar extends Component {
               { this.renderTitle() }
               { this.renderMessage() }
             </View>
+            { this.state.rightElement }
           </View>
         </TouchableOpacity>
       </Animated.View>
