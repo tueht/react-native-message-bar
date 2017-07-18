@@ -29,6 +29,7 @@ class MessageBar extends Component {
       this.alertShown = false;
       this.timeoutHide = null;
 
+      this._alertTapped = this._alertTapped.bind(this)
       this.state = this.getStateByProps(props);
    }
 
